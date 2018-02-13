@@ -52,15 +52,14 @@ zha_new:
     usb_path: /dev/ttyUSB0
     database_path: /home/homeassistant/.homeassistant/zigbee.db
     device_config: 
-  device_config: 
 # tradfri dimmer
-    "00:0b:57:ff:fe:24:18:9f-1":
-      template: tradfri_dimmer
+      "00:0b:57:ff:fe:24:18:9f-1":
+        template: tradfri_dimmer
 # tradfri dimmable bulbs
-    "00:0b:57:ff:fe:2d:ab:35-1":
-      template: TRADFRI_bulb
-    "00:0b:57:ff:fe:b2:d3:b7-1":
-      template: TRADFRI_bulb
+      "00:0b:57:ff:fe:2d:ab:35-1":
+        template: TRADFRI_bulb
+      "00:0b:57:ff:fe:b2:d3:b7-1":
+        template: TRADFRI_bulb
 
 
      
