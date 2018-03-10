@@ -9,7 +9,7 @@ Converted to a custom_component for an easier way to test and distribute to othe
 
 **Current State:needs my bellows changes(timeout values and device_updated event), also includes some bug fixes, updated to latest commits from rcloran, added pull requests to rcloran/bellows** 
 
-## in pipeline for next release
+## added last release release
 - metering/on-off support for sitecom WLE-1000 plugs with reporting
 - Aquara Water sensors as binary-sensors
 - add RSSI/LQI information in entity attributes
