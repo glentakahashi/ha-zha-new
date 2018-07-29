@@ -7,6 +7,7 @@ at https://home-assistant.io/components/sensor.zha/
 """
 import asyncio
 import logging
+import traceback
 
 from homeassistant.components.sensor import DOMAIN
 from homeassistant.const import TEMP_CELSIUS
@@ -118,6 +119,7 @@ class Sensor(zha_new.Entity):
 
     def attribute_updated(self, attribute, value):
         _LOGGER.debug("%s attribute_updated %s : %s", self.entity_id, attribute, value)
+        traceback.print_exc()
         if self._custom_module.get('_parse_attribute', None) is not None:
             (attribute, value) = self._custom_module[
                 '_parse_attribute'](self, attribute, value, self._model)
