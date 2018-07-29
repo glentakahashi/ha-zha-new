@@ -21,7 +21,7 @@ from homeassistant.util import slugify
 from importlib import import_module
 
 
-REQUIREMENTS = ['bellows', 'zigpy']
+REQUIREMENTS = ['git+https://github.com/glentakahashi/bellows', 'git+https://github.com/glentakahashi/zigpy']
 
 DOMAIN = 'zha_new'
 
@@ -891,4 +891,4 @@ def call_func(_model, function, *args):
     except ImportError as e:
         _LOGGER.debug("Import DH %s failed: %s", function, e.args)
     except Exception as e:
-            _LOGGER.info("Excecution of DH %s failed: %s", dev_func, e.args)
+        _LOGGER.info("Excecution of DH %s failed: %s", dev_func, e.args)
