@@ -119,7 +119,7 @@ class Sensor(zha_new.Entity):
 
     def attribute_updated(self, attribute, value):
         _LOGGER.debug("%s attribute_updated %s : %s", self.entity_id, attribute, value)
-        traceback.print_stack()
+        _LOGGER.debug(traceback.format_stack())
         if self._custom_module.get('_parse_attribute', None) is not None:
             (attribute, value) = self._custom_module[
                 '_parse_attribute'](self, attribute, value, self._model)
