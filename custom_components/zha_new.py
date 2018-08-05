@@ -193,10 +193,12 @@ class zha_state(entity.Entity):
 
     async def async_update(self):
 #        from zigpy.zcl import foundation as f
+        _LOGGER.debug("gtak1")
         result = await self.stack._command('neighborCount', [])
         self._device_state_attributes['neighborCount'] = result[0]
         entity_store = get_entity_store(self.hass)
         self._device_state_attributes['no_devices'] = len(entity_store)
+        _LOGGER.debug("gtak2")
         result = await self.stack._command('getValue', 3)
         _LOGGER.debug("buffer: %s", result[1])
         #        buffer = t.uint8_t(result[1])
